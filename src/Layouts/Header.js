@@ -20,20 +20,24 @@ const Header = () => {
   const toggler = () => setToggle(!toggle);
 
   return (
-    <Navbar expand="md" dark>
+    <Navbar expand="md" dark style={{backgroundColor: "black"}}>
       <NavbarBrand>
-        <Link>Suraj</Link>
+        <Link style={{ textDecoration: "none" }} to="/">
+          Suraj
+        </Link>
       </NavbarBrand>
       <NavbarText>
-        context.user?.email ? (<div>{context.user.email}</div> ) : ""
+        {context.user?.email ? <div>{context.user.email}</div> : ""}
       </NavbarText>
 
       <NavbarToggler onClick={toggler} />
       <Collapse isOpen={toggle} navbar>
-        <Nav>
+        <Nav className="ms-auto" justified>
           {context.user ? (
             <NavItem>
-              <NavLink>Logout</NavLink>
+              <NavLink tag={Link} to="/" onClick={() => context.setUser(null)}>
+                Logout
+              </NavLink>
             </NavItem>
           ) : (
             <>
