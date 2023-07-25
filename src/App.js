@@ -18,7 +18,6 @@ import Home from "./Pages/Home";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import { UserContext } from "./Context/UserContext";
-import Footer from "./Layouts/Footer";
 import Header from "./Layouts/Header";
 import FireBaseConfig from "./Firebase/FireBaseConfig";
 
@@ -36,7 +35,6 @@ const App = () => {
           <Route exact path="/Signin" element={<SignIn />} />
           <Route exact path="/Signup" element={<SignUp />} />
         </Routes>
-        <Footer />
       </UserContext.Provider>
     </Router>
   );

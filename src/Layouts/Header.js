@@ -20,14 +20,18 @@ const Header = () => {
   const toggler = () => setToggle(!toggle);
 
   return (
-    <Navbar expand="md" dark style={{backgroundColor: "black"}}>
+    <Navbar expand="md" dark style={{ backgroundColor: "black" }} className="bg-dark">
       <NavbarBrand>
         <Link style={{ textDecoration: "none" }} to="/">
           Suraj
         </Link>
       </NavbarBrand>
       <NavbarText>
-        {context.user?.email ? <div>{context.user.email}</div> : ""}
+        {context.user?.email ? (
+          <div className="text-white"> {context.user.email}</div>
+        ) : (
+          ""
+        )}
       </NavbarText>
 
       <NavbarToggler onClick={toggler} />
@@ -43,10 +47,14 @@ const Header = () => {
             <>
               {" "}
               <NavItem>
-                <NavLink>Sigin</NavLink>
+                <NavLink tag={Link} to="/signin">
+                  Sigin
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Sigup</NavLink>
+                <NavLink tag={Link} to="/signup">
+                  Sigup
+                </NavLink>
               </NavItem>
             </>
           )}
