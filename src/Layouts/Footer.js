@@ -11,15 +11,24 @@ const Footer = () => {
     >
       <Row>
         <Col className="d-flex justify-content-center gap-3  ">
-          <Link style={{ textDecoration: "none" }} to="">
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://github.com/suraj2907"
+          >
             Github
-          </Link>
-          <Link style={{ textDecoration: "none" }} to="">
+          </a>
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://www.linkedin.com/in/suraj-jawrani/"
+          >
             Linkedin
-          </Link>
-          <Link style={{ textDecoration: "none" }} to="s">
+          </a>
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://mail.google.com/mail/u/2/#inbox?compose=CllgCJfsdQQlcJzdLzlKLGRwJQLBqzHqrSBKmCpJqHXtsrnXZPTRtnQxSdBvLkFMvHlbssVcvCg"
+          >
             Surajjawrani2022@gmail.com
-          </Link>
+          </a>
           <div> &copy; Suraj Jawrani </div>
         </Col>
       </Row>

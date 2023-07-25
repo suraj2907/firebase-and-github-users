@@ -6,7 +6,7 @@ const UserCardBody = ({ user }) => {
   return (
     <div>
       <Card style={{ border: "2px solid black", background:"pink", marginTop:"10px", }} body>
-        <CardImg src={user.avatar_url} height="300px" width="300px" style={{borderRadius: "50%",}} />
+        <CardImg src={user.avatar_url} height="400px" width="400px" style={{borderRadius: "50%",}} />
 
         <CardBody>
           <CardTitle>
@@ -15,7 +15,7 @@ const UserCardBody = ({ user }) => {
           </CardTitle>
           <div>
             {" "}
-            <span style={{ fontWeight: "bold" }}>Loaction -:</span>{" "}
+            <span style={{ fontWeight: "bold" }}>Location -:</span>{" "}
             {user.location}
           </div>
           <div>

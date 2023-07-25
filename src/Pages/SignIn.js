@@ -43,7 +43,11 @@ const SignIn = () => {
   return (
     <div>
       <div className="center">
-        <form onSubmit={handleSubmit} className="signin-container" style={{fontWeight:"bold"}}>
+        <form
+          onSubmit={handleSubmit}
+          className="signin-container"
+          style={{ fontWeight: "bold" }}
+        >
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input
