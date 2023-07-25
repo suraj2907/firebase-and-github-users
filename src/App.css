@@ -35,3 +35,14 @@ background: #1b0059a9;
   background: #017da7;
 
 }
+
+
+
+@media only  screen and  (max-width : 450px){
+  .signin-container{
+    width: 90%;
+  }
+  .signup-container{
+    width: 90%;
+  }
+}

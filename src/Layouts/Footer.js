@@ -9,26 +9,44 @@ const Footer = () => {
       className=" bg-dark p-3 fixed-bottom text-white text-uppercase"
     >
       <Row>
-        <Col className="d-flex justify-content-center gap-3  ">
+        <Col
+          xs={12}
+          sm={6}
+          md={4}
+          className="d-flex justify-content-center gap-3  "
+        >
           <a
             style={{ textDecoration: "none" }}
             href="https://github.com/suraj2907"
           >
             Github
           </a>
+        </Col>
+        <Col
+          xs={12}
+          sm={6}
+          md={4}
+          className="d-flex justify-content-center gap-2  "
+        >
           <a
             style={{ textDecoration: "none" }}
             href="https://www.linkedin.com/in/suraj-jawrani/"
           >
             Linkedin
           </a>
+        </Col>
+        <Col
+          xs={12}
+          sm={6}
+          md={4}
+          className="d-flex justify-content-center gap-2  "
+        >
           <a
             style={{ textDecoration: "none" }}
             href="https://mail.google.com/mail/u/2/#inbox?compose=CllgCJfsdQQlcJzdLzlKLGRwJQLBqzHqrSBKmCpJqHXtsrnXZPTRtnQxSdBvLkFMvHlbssVcvCg"
           >
             Surajjawrani2022@gmail.com
           </a>
-          <div> &copy; Suraj Jawrani </div>
         </Col>
       </Row>
     </Container>
