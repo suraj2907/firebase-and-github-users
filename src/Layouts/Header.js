@@ -23,7 +23,7 @@ const Header = () => {
     <Navbar expand="md" dark style={{ backgroundColor: "black" }}>
       <NavbarBrand>
         <Link style={{ textDecoration: "none" }} to="/" onClick={() => context.setUser(null)}>
-          Suraj
+          Github User App
         </Link>
       </NavbarBrand>
       <NavbarText>
