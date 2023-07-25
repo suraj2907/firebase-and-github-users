@@ -33,7 +33,7 @@ const Home = () => {
     <div>
       <Container fluid className="mt-3">
         <Row>
-          <Col md="5">
+          <Col md="5" >
             <InputGroup>
               <Input
                 placeholder="Enter username"

@@ -20,9 +20,9 @@ const Header = () => {
   const toggler = () => setToggle(!toggle);
 
   return (
-    <Navbar expand="md" dark style={{ backgroundColor: "black" }} className="bg-dark">
+    <Navbar expand="md" dark style={{ backgroundColor: "black" }}>
       <NavbarBrand>
-        <Link style={{ textDecoration: "none" }} to="/">
+        <Link style={{ textDecoration: "none" }} to="/" onClick={() => context.setUser(null)}>
           Suraj
         </Link>
       </NavbarBrand>

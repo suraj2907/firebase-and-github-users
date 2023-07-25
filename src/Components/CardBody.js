@@ -5,8 +5,8 @@ import { Card, CardBody, CardTitle, CardFooter, CardImg } from "reactstrap";
 const UserCardBody = ({ user }) => {
   return (
     <div>
-      <Card style={{ border: "2px solid black", background:"pink", marginTop:"10px" }} body>
-        <CardImg src={user.avatar_url} height="500px" style={{borderRadius: "full"}} />
+      <Card style={{ border: "2px solid black", background:"pink", marginTop:"10px", }} body>
+        <CardImg src={user.avatar_url} height="300px" width="300px" style={{borderRadius: "50%",}} />
 
         <CardBody>
           <CardTitle>
