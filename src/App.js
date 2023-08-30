@@ -24,19 +24,43 @@ import FireBaseConfig from "./Firebase/FireBaseConfig";
 firebase.initializeApp(FireBaseConfig);
 const App = () => {
   const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-  return (
-    <Router>
-      <ToastContainer />
-      <UserContext.Provider value={{ user, setUser }}>
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/Signin" element={<SignIn />} />
-          <Route exact path="/Signup" element={<SignUp />} />
-        </Routes>
-      </UserContext.Provider>
-    </Router>
+  useEffect(() => {
+    setIsLoading(true);
+
+    const unsubscribe = firebase.auth().onAuthStateChanged((authUser) => {
+      setIsLoading(true);
+      if (authUser) {
+        setUser(authUser);
+      } else {
+        setUser(null);
+      }
+      setIsLoading(false);
+    });
+
+    return () => {
+      // Unsubscribe the listener when component unmounts
+      unsubscribe();
+    };
+  }, []);
+
+  return isLoading ? (
+    <div>...Loading</div>
+  ) : (
+    <>
+      <Router>
+        <ToastContainer />
+        <UserContext.Provider value={{ user, setUser }}>
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/Signin" element={<SignIn />} />
+            <Route exact path="/Signup" element={<SignUp />} />
+          </Routes>
+        </UserContext.Provider>
+      </Router>
+    </>
   );
 };
 
